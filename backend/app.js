@@ -18,8 +18,8 @@ app.use(
 app.use(
   cors({
     // origin: process.env.FRONTEND_URL,
-    origin: "https://assignment-whitecarrot-intern-2025-beta.vercel.app/",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    origin: ["https://assignment-whitecarrot-intern-2025-beta.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );

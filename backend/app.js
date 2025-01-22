@@ -17,12 +17,13 @@ app.use(
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    // origin: process.env.FRONTEND_URL,
+    origin: "https://assignment-whitecarrot-intern-2025-beta.vercel.app/",
     credentials: true,
   })
 );
 
-// console.log(process.env.FRONTEND_URL);
+console.log(process.env.FRONTEND_URL);
 
 app.use(authRoutes);
 

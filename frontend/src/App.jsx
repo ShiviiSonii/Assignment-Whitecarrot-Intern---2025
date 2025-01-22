@@ -51,7 +51,7 @@ const App = () => {
   useEffect(() => {
     const checkLoginStatus = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/events", {
+        const response = await axios.get("https://assignment-whitecarrot-intern-2025-69qs.vercel.app/events", {
           withCredentials: true,
         });
         if (response.status === 200) {
@@ -74,7 +74,7 @@ const App = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/events", {
+      const response = await axios.get("https://assignment-whitecarrot-intern-2025-69qs.vercel.app/events", {
         withCredentials: true,
       });
       const categorizedEvents = addCategoriesToEvents(response.data);
@@ -147,7 +147,7 @@ const App = () => {
   };
 
   const handleLogin = () => {
-    window.location.href = "http://localhost:3000/auth/google";
+    window.location.href = "https://assignment-whitecarrot-intern-2025-69qs.vercel.app/auth/google";
   };
 
   const handleToggleDarkMode = () => {

@@ -12,7 +12,7 @@ app.use(
     secret: process.env.SESSION_SECRET || "123",
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false },
+    cookie: { secure: process.env.NODE_ENV === "production" },
   })
 );
 

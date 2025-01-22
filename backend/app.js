@@ -5,23 +5,19 @@ import session from "express-session";
 import { getCalendarEvents } from "./services/googleAuthService.js";
 
 const app = express();
-const port = 3000;
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || "123",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: process.env.NODE_ENV === "production" },
+    cookie: { secure: false },
   })
 );
 
 app.use(
   cors({
-    origin:
-      process.env.NODE_ENV === "production"
-        ? "https://assignment-whitecarrot-intern-2025-rho.vercel.app"
-        : "http://localhost:5173",
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   })
 );
@@ -41,6 +37,6 @@ app.get("/events", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server is listening on port: ${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Server is listening on port: ${process.env.PORT}`);
 });

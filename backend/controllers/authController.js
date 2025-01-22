@@ -14,8 +14,7 @@ export const authGoogleCallback = async (req, res) => {
   try {
     const tokens = await getTokens(code);
     req.session.tokens = tokens;
-
-    res.redirect("http://localhost:5173");
+    res.redirect(process.env.FRONTEND_URL);
   } catch (error) {
     console.error("Error during Google OAuth callback:", error);
     res.status(500).send("Authentication failed");

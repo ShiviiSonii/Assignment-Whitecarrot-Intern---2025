@@ -21,6 +21,9 @@ app.use(
     credentials: true,
   })
 );
+
+// console.log(process.env.FRONTEND_URL);
+
 app.use(authRoutes);
 
 app.get("/events", async (req, res) => {

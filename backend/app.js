@@ -18,7 +18,10 @@ app.use(
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin:
+      process.env.NODE_ENV === "production"
+        ? "https://assignment-whitecarrot-intern-2025-rho.vercel.app"
+        : "http://localhost:5173",
     credentials: true,
   })
 );

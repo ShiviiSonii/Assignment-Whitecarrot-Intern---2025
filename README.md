@@ -49,3 +49,56 @@ This project is a web application designed for managing Google Calendar events w
 ![Screenshot 2025-01-22 171921](https://github.com/user-attachments/assets/f1c7351c-7a4a-4ab1-be4f-60f139b24e93)
 ![Screenshot 2025-01-22 171940](https://github.com/user-attachments/assets/5c7e291e-59d5-4bcc-8113-ed0fc988600a)
 
+# Running the Project Locally
+
+Follow these steps to clone and run this project on your local machine.
+
+## 1. Clone the Repository
+Clone the repository to your local machine using Git:
+```bash
+git clone https://github.com/ShiviiSonii/Assignment-Whitecarrot-Intern---2025
+```
+## 2. Navigate to the Backend Folder
+Change your directory to the backend folder:
+```bash
+cd backend
+```
+## 3. Install dependencies
+Install the necessary dependencies for the backend:
+```bash
+npm install
+```
+## 4. Update .env
+```bash
+PORT = 3000
+GOOGLE_CLIENT_ID = 
+GOOGLE_CLIENT_SECRET =
+SESSION_SECRET=
+GOOGLE_REDIRECT_URL = 
+FRONTEND_URL = 
+```
+
+## 5. Start the Backend Server
+Run the backend server:
+```bash
+npm start
+```
+## 6. Navigate to the Frontend Folder
+Change your directory to the frontend folder:
+```bash
+cd frontend
+```
+## 7. Install dependencies
+Install the necessary dependencies for the backend:
+```bash
+npm install
+```
+## 8. Start the Frontend Server
+Run the backend server:
+```bash
+npm run dev
+```
+
+
+
+

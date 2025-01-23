@@ -1,4 +1,8 @@
-import { getAuthUrl, getTokens } from "../services/googleAuthService.js";
+import {
+  getAuthUrl,
+  getTokens,
+  getCalendarEvents,
+} from "../services/googleAuthService.js";
 
 export const authGoogle = (req, res) => {
   const authUrl = getAuthUrl();

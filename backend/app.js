@@ -11,21 +11,19 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false },
+    cookie: {
+      secure: false,
+      // httpOnly: true,
+      // sameSite: "None"
+    },
   })
 );
 
 app.use(
   cors({
-    origin: "https://assignment-whitecarrot-intern-2025-beta.vercel.app",
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   })
-  //   {
-  //   origin: process.env.FRONTEND_URL,
-  //   // origin: ["https://assignment-whitecarrot-intern-2025-beta.vercel.app"],
-  //   methods: ["GET", "POST", "PUT", "DELETE"],
-  //   credentials: true,
-  // }
 );
 
 console.log(process.env.FRONTEND_URL);

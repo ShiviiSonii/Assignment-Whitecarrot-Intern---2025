@@ -32,6 +32,7 @@ app.use(authRoutes);
 
 app.get("/events", async (req, res) => {
   try {
+    console.log(req.session.tokens);
     if (!req.session.tokens) {
       return res.status(401).send("Unauthorized");
     }

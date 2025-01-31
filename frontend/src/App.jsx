@@ -54,6 +54,9 @@ const App = () => {
         const response = await axios.get("https://assignment-whitecarrot-intern-2025-bjwz.vercel.app/events", {
           withCredentials: true,
         });
+        
+        console.log("Response", response)
+
         if (response.status === 200) {
           setIsLoggedIn(true);
         }
